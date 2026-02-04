@@ -1,0 +1,30 @@
+dist:
+  name: collector-framework
+  description: Demonstrating how to use the OpenTelemetry Collector as a framework
+  output_path: ./tmp/collector
+
+connectors:
+  - gomod: github.com/dmathieu/collector-framework/connector v0.0.0
+    name: framework_connector
+exporters:
+  - gomod: github.com/dmathieu/collector-framework/exporter v0.0.0
+    name: framework_exporter
+extensions:
+  - gomod: github.com/dmathieu/collector-framework/extension v0.0.0
+    name: framework_extension
+processors:
+  - gomod: github.com/dmathieu/collector-framework/processor v0.0.0
+    name: framework_processor
+receivers:
+  - gomod: github.com/dmathieu/collector-framework/receiver v0.0.0
+    name: framework_receiver
+  - gomod: github.com/dmathieu/collector-framework/scraper v0.0.0
+    name: framework_scraper
+
+replaces:
+  - github.com/dmathieu/collector-framework/connector => ../../connector
+  - github.com/dmathieu/collector-framework/exporter => ../../exporter
+  - github.com/dmathieu/collector-framework/extension => ../../extension
+  - github.com/dmathieu/collector-framework/processor => ../../processor
+  - github.com/dmathieu/collector-framework/receiver => ../../receiver
+  - github.com/dmathieu/collector-framework/scraper => ../../scraper

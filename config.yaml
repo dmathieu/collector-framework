@@ -1,0 +1,23 @@
+---
+connectors:
+  spanmetrics:
+exporters:
+  customapi:
+extensions:
+  healthcheck:
+processors:
+  addattribute:
+receivers:
+  customhttp:
+  cpuscraper:
+
+service:
+  extensions: [healthcheck]
+  pipelines:
+    traces:
+      exporters: [spanmetrics]
+      processors: [addattribute]
+      receivers: [customhttp]
+    metrics:
+      receivers: [spanmetrics, cpuscraper]
+      exporters: [customapi]
