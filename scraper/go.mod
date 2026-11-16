@@ -1,6 +1,6 @@
 module codeberg.org/dmathieu/collector-framework/scraper
 
-go 1.25.6
+go 1.26.0
 
 require (
 	go.opentelemetry.io/collector/component v1.50.0
@@ -24,9 +24,9 @@ require (
 	go.opentelemetry.io/collector/pipeline v1.50.0 // indirect
 	go.opentelemetry.io/collector/pipeline/xpipeline v0.144.0 // indirect
 	go.opentelemetry.io/collector/receiver/receiverhelper v0.144.0 // indirect
-	go.opentelemetry.io/otel v1.44.0 // indirect
-	go.opentelemetry.io/otel/metric v1.44.0 // indirect
-	go.opentelemetry.io/otel/trace v1.44.0 // indirect
+	go.opentelemetry.io/otel v1.47.0 // indirect
+	go.opentelemetry.io/otel/metric v1.47.0 // indirect
+	go.opentelemetry.io/otel/trace v1.47.0 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
 	go.uber.org/zap v1.27.1 // indirect
 	golang.org/x/sys v0.47.0 // indirect
